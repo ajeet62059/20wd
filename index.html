@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=What+are+the+top+marketing+challenges+for+small+businesses",
+          "https://www.bing.com/search?q=How+to+leverage+user-generated+content+in+your+marketing+efforts",
+          "https://www.bing.com/search?q=What+is+the+impact+of+AI+and+machine+learning+on+marketing",
+          "https://www.bing.com/search?q=How+to+create+a+successful+omnichannel+marketing+strategy",
+          "https://www.bing.com/search?q=What+are+the+key+elements+of+a+persuasive+marketing+message",
+          "https://www.bing.com/search?q=How+to+use+storytelling+in+marketing+to+connect+with+your+audience",
+          "https://www.bing.com/search?q=What+are+the+best+practices+for+marketing+on+social+media+platforms",
+          "https://www.bing.com/search?q=How+to+optimize+your+landing+pages+for+conversion",
+          "https://www.bing.com/search?q=What+are+the+trends+in+mobile+marketing+for+2023",
+          "https://www.bing.com/search?q=How+to+integrate+content+marketing+with+your+SEO+strategy",
+          "https://www.bing.com/search?q=What+are+the+key+elements+of+a+successful+product+launch",
+          "https://www.bing.com/search?q=How+to+build+a+strong+online+reputation+for+your+business",
+          "https://www.bing.com/search?q=What+is+the+role+of+data+analytics+in+marketing+decision-making",
+          "https://www.bing.com/search?q=How+to+create+a+customer+loyalty+program+that+works",
+          "https://www.bing.com/search?q=What+are+the+best+practices+for+event+marketing+and+promotion",
+          "https://www.bing.com/search?q=How+to+target+and+personalize+marketing+for+different+customer+segments",
+          "https://www.bing.com/search?q=What+are+the+emerging+trends+in+B2B+marketing",
+          "https://www.bing.com/search?q=How+to+use+social+proof+and+reviews+in+marketing",
+          "https://www.bing.com/search?q=What+are+the+key+metrics+for+measuring+marketing+success",
+          "https://www.bing.com/search?q=How+to+adapt+your+marketing+strategies+in+a+rapidly+changing+digital+landscape",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
